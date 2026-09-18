@@ -1,11 +1,11 @@
 'use strict';
 
-var CACHE_NAME = 'seed-oracle-2026-09-18h';
+var CACHE_NAME = 'seed-oracle-2026-09-18j';
 var APP_SHELL = [
   './',
   './index.html',
-  './manifest.webmanifest?v=20260918h',
-  './css/site.css?v=20260918e',
+  './manifest.webmanifest?v=20260918j',
+  './css/site.css?v=20260918i',
   './js/site.js?v=20260918c',
   './js/ichingjudgments.js',
   './js/bip39-words.js',
@@ -15,15 +15,15 @@ var APP_SHELL = [
   './js/seedoracle-store.js?v=20260715a',
   './js/seedoracle-bitcoin.js?v=20260716b',
   './js/seedoracle-hexagrams.js?v=20260909b',
-  './js/seedoracle.js?v=20260912p',
-  './assets/favicon.svg?v=20260918g',
-  './assets/favicon.ico?v=20260918g',
-  './assets/apple-touch-icon-180.png',
+  './js/seedoracle.js?v=20260918i',
+  './assets/favicon.svg?v=20260918j',
+  './assets/favicon.ico?v=20260918j',
+  './assets/apple-touch-icon-180.png?v=20260918j',
   './assets/app-icon.svg',
   './assets/app-icon-maskable.svg',
-  './assets/app-icon-192.png',
-  './assets/app-icon-512.png',
-  './assets/app-icon-maskable-512.png',
+  './assets/app-icon-192.png?v=20260918j',
+  './assets/app-icon-512.png?v=20260918j',
+  './assets/app-icon-maskable-512.png?v=20260918j',
   './assets/logo-mark.svg'
 ];
 

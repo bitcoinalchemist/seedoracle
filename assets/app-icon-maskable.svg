@@ -2,7 +2,7 @@
   <rect width="80" height="80" fill="#100c1e"/>
   <!-- Adaptive launchers may crop to circles, squircles, or other shapes.
        Keep the complete mark comfortably inside the universal safe zone. -->
-  <g transform="translate(10 10) scale(.75)">
+  <g transform="translate(15.2 15.2) scale(.62)">
     <path d="M40 5C24 14 14 28 14 44c0 18 11 30 26 32 15-2 26-14 26-32C66 28 56 14 40 5Z"
           fill="none" stroke="#c79a54" stroke-width="2.8" stroke-linejoin="round"/>
     <g fill="#a5702e">

@@ -518,15 +518,15 @@
       for(var i=0;i<v.length;i+=2) bytes[i/2]=parseInt(v.slice(i,i+2),16);
       var h=sha256Bytes(bytes), hex='';
       for(i=0;i<h.length;i++) hex+=('0'+h[i].toString(16)).slice(-2);
-      var cs=state.len/3;   // 4 seal bits for the twelve-word reading
-      var b8=bits(h[0],8);
-      document.getElementById('soShaHex').textContent=hex;
-      document.getElementById('soShaBits').innerHTML='<span class="so-sha-hl">'+b8.slice(0,cs)+'</span>'+b8.slice(cs);
+      var cs=state.len/3;   // 4 checksum bits for the twelve-word reading
+      var firstHex=hex.charAt(0), checksumBits=bits(parseInt(firstHex,16),cs);
+      document.getElementById('soShaHex').innerHTML='<span class="so-sha-first">'+firstHex+'</span>'+hex.slice(1);
+      document.getElementById('soShaBits').innerHTML='<span class="so-sha-first">'+firstHex+'</span><span class="so-sha-base"> hex</span><span class="so-sha-arrow" aria-hidden="true">→</span><span class="so-sha-hl">'+checksumBits+'</span><span class="so-sha-base"> binary</span>';
       var match=document.getElementById('soShaMatch');
       if(_sealed && v===entropyHex()){
-        match.innerHTML='<span class="so-sha-hl">'+b8.slice(0,cs)+'</span> matches the seal.';
+        match.innerHTML='<span class="so-sha-hl">'+checksumBits+'</span> matches the four checksum lines in the seal.';
       } else {
-        match.textContent='The highlighted bits are the seal any 128-bit entropy demands of its final lines.';
+        match.textContent='The first hex digit is exactly four bits, so it supplies the complete checksum for 128-bit entropy.';
       }
       out.hidden=false;
     });
