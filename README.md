@@ -54,6 +54,7 @@ Before publishing, set the production canonical and Open Graph URLs in
 - `js/site.js` — header, accessibility helpers, and collapsible sections.
 - `js/seedoracle*.js` — casting, state, hexagram, and Bitcoin teaching logic.
 - `js/stardata.js` and `js/stars.js` — fixed-sky catalogue data and renderer.
+- `assets/app-icon.svg` — full-bleed source artwork for install icons.
 - `manifest.webmanifest` and `sw.js` — install metadata and offline app shell.
 - `tests/seedoracle-vectors.cjs` — deterministic cryptographic test vectors.
 
