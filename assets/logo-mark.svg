@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-labelledby="title desc">
+  <title id="title">Seed Oracle</title>
+  <desc id="desc">A seed containing six I Ching lines</desc>
+  <path d="M40 5C24 14 14 28 14 44c0 18 11 30 26 32 15-2 26-14 26-32C66 28 56 14 40 5Z"
+        fill="none" stroke="#c79a54" stroke-width="2.5" stroke-linejoin="round"/>
+  <g fill="#a5702e">
+    <rect x="27" y="22" width="26" height="3" rx="1.5"/>
+    <rect x="27" y="29" width="10" height="3" rx="1.5"/><rect x="43" y="29" width="10" height="3" rx="1.5"/>
+    <rect x="27" y="36" width="26" height="3" rx="1.5"/>
+    <rect x="27" y="43" width="10" height="3" rx="1.5"/><rect x="43" y="43" width="10" height="3" rx="1.5"/>
+  </g>
+  <g fill="#c79a54">
+    <rect x="27" y="50" width="26" height="3" rx="1.5"/>
+    <rect x="27" y="57" width="10" height="3" rx="1.5"/><rect x="43" y="57" width="10" height="3" rx="1.5"/>
+  </g>
+  <path d="M40 76c0-6 4-10 10-12" fill="none" stroke="#c79a54" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

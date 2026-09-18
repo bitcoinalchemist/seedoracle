@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seed Oracle: BIP39 × I Ching</title>
+  <meta name="description" content="Cast I Ching hexagrams line by line until they become a BIP39 seed phrase. For wonder, not for storing real funds." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#100c1e" />
+  <meta name="version" content="2026-09-10l" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Seed Oracle: BIP39 × I Ching" />
+  <meta property="og:description" content="Cast I Ching hexagrams line by line until they become a BIP39 seed phrase. For wonder, not for storing real funds." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Seed Oracle: BIP39 × I Ching" />
+  <meta name="twitter:description" content="Cast I Ching hexagrams line by line until they become a BIP39 seed phrase. For wonder, not for storing real funds." />
+  <meta name="twitter:image" content="assets/og-image.png" />
+  <link rel="stylesheet" href="css/site.css?v=20260912q" />
+</head>
+<body class="starry so-ctx">
+<canvas class="stars-bg" aria-hidden="true"></canvas>
+<script src="js/site.js?v=20260910j"></script>
+
+<!-- One .page-content wrapper + one <main>: every .page-section is a sibling,
+     so the shared --section-gap rule owns the vertical rhythm. The page is a
+     GATED JOURNEY: chapters carry data-level (the unlock tier they belong to)
+     and js/seedoracle.js locks/unlocks them as the visitor casts. -->
+<div class="page-content">
+
+  <main id="main">
+    <h1 class="vh">Seed Oracle: I Ching hexagrams into a BIP39 seed phrase</h1>
+
+    <!-- announces chapter unlocks to screen readers -->
+    <div class="vh" aria-live="polite" id="soAnnounce"></div>
+
+    <aside class="so-alert so-alert--top" role="note">
+      <p>Never store real funds in any seed shown here. Never paste a real phrase into this or any web page.</p>
+    </aside>
+
+    <section class="page-section so-chapter section-start-closed" id="firstline" data-level="0" aria-labelledby="firstlineHeading">
+      <h2 class="section-heading" id="firstlineHeading"><button class="section-toggle" type="button" aria-expanded="false" aria-controls="firstlineBody" data-section="firstline"><span class="so-chapter-number">I</span><span class="section-label">The Cast</span><svg class="section-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button></h2>
+      <div class="section-bodywrap"><div class="section-bodymin" id="firstlineBody">
+        <p class="so-intro">A line becomes a figure. The same bits become words.</p>
+        <div class="so-cast-desk">
+          <div class="so-line-stage">
+            <div class="so-live-hex">
+              <div class="so-geo-stat so-line-stat" id="soLineStat" aria-live="polite">hexagram 1</div>
+              <div class="so-line-fig" id="soLineFig" aria-hidden="true"></div>
+              <div class="so-line-kw" id="soLineKw">King Wen —</div>
+              <div class="so-line-bits" id="soLineBits" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="so-cast-controls">
+            <button class="btn btn--gold" id="soLineCast" type="button">Cast a line</button>
+            <div class="so-cast-shortcuts"><button class="btn btn--ghost" id="soHexOne" type="button">Cast a hexagram</button><button class="btn btn--ghost" id="soHexAll" type="button">Cast all</button></div>
+          </div>
+        </div>
+        <div id="weave" class="so-weave-wrap">
+          <div class="so-weave-heading"><span class="so-eyebrow">The weave</span><span class="so-geo-stat" id="soHexStat"></span></div>
+          <div class="so-weave" id="soStack" role="group" aria-label="Your cast as hexagrams, bits, and seed words"></div>
+          <p class="so-note so-weave-caption">Read each band left to right. Six bits make a hexagram; eleven make a word.</p>
+          <div class="so-actions"><button class="btn btn--gold" id="soToSeal" type="button" hidden>Choose your seal <span aria-hidden="true">↓</span></button></div>
+        </div>
+</div></div>
+    </section>
+    <section class="page-section so-chapter" id="seal" data-level="3" aria-labelledby="sealHeading">
+      <h2 class="section-heading" id="sealHeading"><button class="section-toggle" type="button" aria-expanded="false" aria-controls="sealBody" data-section="seal"><span class="so-chapter-number">II</span><span class="section-label">The Seal</span><svg class="section-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button></h2>
+      <div class="section-bodywrap"><div class="section-bodymin" id="sealBody">
+        <div class="narrow"><p class="so-intro">Two lines are yours. Four are written by the cast.</p><p class="so-note">Choose the element that completes your reading.</p></div>
+        <div id="elementseal"><div class="so-fh-out" id="soFhOut" aria-live="polite"></div>
+          <div class="so-actions"><button class="btn btn--ghost" id="soOracle" type="button">Let the oracle choose</button></div>
+        </div>
+        <div class="so-phrase-reveal" id="soPhraseReveal" hidden>
+          <div class="so-seal-complete"><div class="so-seal-fig" id="soSealFig" aria-hidden="true"></div><div><span class="so-eyebrow" id="soChosenElement">Your seal</span><p class="so-seal-figcap" id="soSealFigCap"></p></div></div>
+          <span class="so-eyebrow">Your twelve words</span>
+          <div class="so-phrase-wrap"><textarea id="soPhrase" hidden readonly aria-hidden="true" tabindex="-1"></textarea><ol class="so-phrase-list" id="soPhraseDisplay" tabindex="0" aria-label="Generated seed phrase, twelve words"></ol><div class="so-status" id="soStatus"><span class="so-dot"></span><span class="msg">-</span></div></div>
+          <p class="so-note">For this reading only. Never use these words for real funds.</p>
+          <div class="so-actions"><button class="btn btn--gold" id="soToProof" type="button">See the proof <span aria-hidden="true">↓</span></button><button class="btn btn--ghost" id="soNewReading" type="button" hidden>Begin a new reading</button></div>
+        </div>
+</div></div>
+    </section>
+    <section class="page-section so-chapter" id="underhood" data-level="4" aria-labelledby="underhoodHeading">
+      <h2 class="section-heading" id="underhoodHeading"><button class="section-toggle" type="button" aria-expanded="false" aria-controls="underhoodBody" data-section="underhood"><span class="so-chapter-number">III</span><span class="section-label">The Proof</span><svg class="section-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button></h2>
+      <div class="section-bodywrap"><div class="section-bodymin" id="underhoodBody"><div class="narrow"><p class="so-intro">Nothing hidden. Every bit accounted for.</p><div class="so-ledger"><span>126 cast</span><span>+</span><span class="so-key-free">2 chosen</span><span>+</span><span class="so-key-cs">4 checksum</span><span>= 132 bits · 12 words</span></div><div id="proof">              <p class="so-note">Your cast supplies 128 bits. SHA-256 supplies the final four.</p>
+              <div class="so-proof-values">
+                <div class="so-ent-out" id="soEntOut"><p class="so-note">Seal a reading above to see its entropy.</p></div>
+                <div class="so-ent-row so-seed-row"><span class="so-ent-k">BIP39 seed · 512 bits</span><span class="so-ent-v so-seedout" id="soSeed">-</span></div>
+              </div>
+              <div class="so-sha" id="soShaBlock">
+                <span class="section-label" style="margin-top:var(--space-5)">The instrument · SHA-256</span>
+                <p class="so-note">Verify the seal yourself: hash your entropy, and the first four bits
+                of the digest must be your four seal lines.</p>
+                <div class="so-sha-row">
+                  <input class="so-sha-input" id="soShaIn" type="text" placeholder="hex bytes, e.g. deadbeef" spellcheck="false" aria-label="Hex bytes to hash" />
+                  <button class="btn btn--ghost" id="soShaFrom" type="button" title="Copy your cast's entropy hex into the box">From cast</button>
+                  <button class="btn btn--gold" id="soShaGo" type="button">Hash</button>
+                </div>
+                <div class="so-geo-stat" id="soShaErr"></div>
+                <div class="so-sha-out" id="soShaOut" hidden>
+                  <div class="so-ent-row"><span class="so-ent-k">SHA-256 · hex</span><span class="so-ent-v" id="soShaHex"></span></div>
+                  <div class="so-ent-row"><span class="so-ent-k">First byte · bits</span><span class="so-ent-v" id="soShaBits"></span></div>
+                  <p class="so-note" id="soShaMatch"></p>
+                </div>
+              </div>
+</div>
+            <details class="so-fold so-fold-sec" id="soAddrFold">
+              <summary><span>Addresses</span><svg class="section-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+              <div class="so-addr-controls">
+                <label for="soAddrType">Type</label>
+                <select id="soAddrType">
+                  <option value="bip84">Native SegWit · BIP84 · bc1q…</option>
+                  <option value="bip49">Nested SegWit · BIP49 · 3…</option>
+                  <option value="bip44">Legacy · BIP44 · 1…</option>
+                  <option value="bip86">Taproot · BIP86 · bc1p…</option>
+                </select>
+              </div>
+              <div class="so-addr-out" id="soAddrOut"><p class="so-note">Expand to derive the first address from this seed.</p></div>
+            </details>
+
+</div></div></div>
+    </section>
+    <footer class="so-footer" id="learn">
+      <details class="so-fold so-cipher" id="soCipher">
+        <summary>I Ching Hexagrams</summary>
+        <p class="so-note">The same figure has a binary value (0–63 in decimal) and a King Wen number (1–64). This is a lookup between two orderings; the lines do not change. Fu Xi orders these figures by binary value; King Wen gives each a traditional number. Bits are read from the bottom line upwards.</p>
+        <div class="so-sequence" role="group" aria-label="Chart order"><button class="btn btn--ghost" type="button" data-seq="fuxi" aria-pressed="true">Fu Xi · binary</button><button class="btn btn--ghost" type="button" data-seq="kingwen" aria-pressed="false">King Wen · 1–64</button></div>
+        <div class="so-chart-scroll" tabindex="0" role="region" aria-label="64 hexagrams, scroll horizontally on small screens"><div class="so-chart" id="soChart"></div></div>
+        <p class="so-note">Changing this chart’s order leaves your reading unchanged. Select a figure to read its judgment.</p>
+      </details>
+      <details class="so-fold so-credits"><summary>Credits &amp; sources</summary><p class="so-credit">Built on <a href="https://github.com/iancoleman/bip39" target="_blank" rel="noopener">Ian Coleman’s BIP39</a> (MIT, © 2014–2016 Ian Coleman). Hexagram readings are supplied English translations of the original Zhōu Yì judgments.</p><p class="so-credit">Stars adapted from the <a href="https://github.com/astronexus/HYG-Database" target="_blank" rel="noopener">HYG catalogue</a> (CC BY-SA 4.0). Original teaching copy: CC BY-NC 4.0. Code: MIT.</p></details>
+    </footer>
+  </main>
+</div><!-- /.page-content -->
+
+<!-- Hexagram detail popup (shared .hx-popup chrome from css/site.css) -->
+<div class="hx-overlay" id="hxOverlay">
+  <div class="hx-popup" id="hxPopup" role="dialog" aria-modal="true" aria-labelledby="hxName" tabindex="-1">
+    <button class="hx-close" id="hxClose" aria-label="Close">✕</button>
+    <div class="hx-header">
+      <div class="hx-fig">
+        <div class="hx-fig-svg" id="hxFig"></div>
+        <div class="hx-fig-num" id="hxFigNum"></div>
+      </div>
+      <div class="hx-id">
+        <div class="hx-kw" id="hxKw"></div>
+        <div class="hx-name" id="hxName"></div>
+        <div class="hx-trig" id="hxTrig"></div>
+      </div>
+    </div>
+    <div class="hx-body" id="hxContent" tabindex="0"></div>
+  </div>
+</div>
+
+<script src="js/ichingjudgments.js"></script>
+<script src="js/bip39-words.js"></script>
+<script src="js/bip84.js"></script>
+<script src="js/stardata.js?v=20260909a"></script>
+<script src="js/stars.js?v=20260909a"></script>
+<script src="js/seedoracle-store.js?v=20260715a"></script>
+<script src="js/seedoracle-bitcoin.js?v=20260716b"></script>
+<script src="js/seedoracle-hexagrams.js?v=20260909b"></script>
+<script src="js/seedoracle.js?v=20260912p"></script>
+</body>
+</html>
