@@ -1,10 +1,10 @@
 'use strict';
 
-var CACHE_NAME = 'seed-oracle-2026-09-18g';
+var CACHE_NAME = 'seed-oracle-2026-09-18h';
 var APP_SHELL = [
   './',
   './index.html',
-  './manifest.webmanifest?v=20260918f',
+  './manifest.webmanifest?v=20260918h',
   './css/site.css?v=20260918e',
   './js/site.js?v=20260918c',
   './js/ichingjudgments.js',
@@ -18,10 +18,12 @@ var APP_SHELL = [
   './js/seedoracle.js?v=20260912p',
   './assets/favicon.svg?v=20260918g',
   './assets/favicon.ico?v=20260918g',
-  './assets/apple-touch-icon.png',
+  './assets/apple-touch-icon-180.png',
   './assets/app-icon.svg',
-  './assets/icon-192.png',
-  './assets/icon-512.png',
+  './assets/app-icon-maskable.svg',
+  './assets/app-icon-192.png',
+  './assets/app-icon-512.png',
+  './assets/app-icon-maskable-512.png',
   './assets/logo-mark.svg'
 ];
 
