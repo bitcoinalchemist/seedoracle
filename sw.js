@@ -1,6 +1,6 @@
 'use strict';
 
-var CACHE_NAME = 'seed-oracle-2026-09-18f';
+var CACHE_NAME = 'seed-oracle-2026-09-18g';
 var APP_SHELL = [
   './',
   './index.html',
@@ -16,8 +16,8 @@ var APP_SHELL = [
   './js/seedoracle-bitcoin.js?v=20260716b',
   './js/seedoracle-hexagrams.js?v=20260909b',
   './js/seedoracle.js?v=20260912p',
-  './assets/favicon.svg',
-  './assets/favicon.ico',
+  './assets/favicon.svg?v=20260918g',
+  './assets/favicon.ico?v=20260918g',
   './assets/apple-touch-icon.png',
   './assets/app-icon.svg',
   './assets/icon-192.png',
