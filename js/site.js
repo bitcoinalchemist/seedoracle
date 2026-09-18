@@ -1,6 +1,14 @@
 (function () {
   'use strict';
 
+  // Keep the static site installable without making service-worker support a
+  // requirement for the oracle itself.
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).catch(function () {});
+    });
+  }
+
   // Chromium can reject an in-progress native document view transition when
   // another navigation interrupts it. It is harmless, but otherwise appears
   // as an unhandled rejection during rapid navigation.

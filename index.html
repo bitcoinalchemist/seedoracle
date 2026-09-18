@@ -9,9 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest?v=20260918c" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Seed Oracle" />
   <meta name="theme-color" content="#100c1e" />
-  <meta name="version" content="2026-09-10l" />
+  <meta name="version" content="2026-09-18c" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Seed Oracle: BIP39 × I Ching" />
   <meta property="og:description" content="Cast I Ching hexagrams line by line until they become a BIP39 seed phrase. For wonder, not for storing real funds." />
@@ -20,11 +24,11 @@
   <meta name="twitter:title" content="Seed Oracle: BIP39 × I Ching" />
   <meta name="twitter:description" content="Cast I Ching hexagrams line by line until they become a BIP39 seed phrase. For wonder, not for storing real funds." />
   <meta name="twitter:image" content="assets/og-image.png" />
-  <link rel="stylesheet" href="css/site.css?v=20260912q" />
+  <link rel="stylesheet" href="css/site.css?v=20260918a" />
 </head>
 <body class="starry so-ctx">
 <canvas class="stars-bg" aria-hidden="true"></canvas>
-<script src="js/site.js?v=20260910j"></script>
+<script src="js/site.js?v=20260918c"></script>
 
 <!-- One .page-content wrapper + one <main>: every .page-section is a sibling,
      so the shared --section-gap rule owns the vertical rhythm. The page is a
@@ -125,14 +129,14 @@
 </div></div></div>
     </section>
     <footer class="so-footer" id="learn">
-      <details class="so-fold so-cipher" id="soCipher">
-        <summary>I Ching Hexagrams</summary>
+      <details class="so-fold so-cipher" id="soCipher" name="footer-disclosure">
+        <summary>Hexagrams</summary>
         <p class="so-note">The same figure has a binary value (0–63 in decimal) and a King Wen number (1–64). This is a lookup between two orderings; the lines do not change. Fu Xi orders these figures by binary value; King Wen gives each a traditional number. Bits are read from the bottom line upwards.</p>
         <div class="so-sequence" role="group" aria-label="Chart order"><button class="btn btn--ghost" type="button" data-seq="fuxi" aria-pressed="true">Fu Xi · binary</button><button class="btn btn--ghost" type="button" data-seq="kingwen" aria-pressed="false">King Wen · 1–64</button></div>
-        <div class="so-chart-scroll" tabindex="0" role="region" aria-label="64 hexagrams, scroll horizontally on small screens"><div class="so-chart" id="soChart"></div></div>
+        <div class="so-chart-scroll" tabindex="0" role="region" aria-label="64 hexagrams"><div class="so-chart" id="soChart"></div></div>
         <p class="so-note">Changing this chart’s order leaves your reading unchanged. Select a figure to read its judgment.</p>
       </details>
-      <details class="so-fold so-credits"><summary>Credits &amp; sources</summary><p class="so-credit">Built on <a href="https://github.com/iancoleman/bip39" target="_blank" rel="noopener">Ian Coleman’s BIP39</a> (MIT, © 2014–2016 Ian Coleman). Hexagram readings are supplied English translations of the original Zhōu Yì judgments.</p><p class="so-credit">Stars adapted from the <a href="https://github.com/astronexus/HYG-Database" target="_blank" rel="noopener">HYG catalogue</a> (CC BY-SA 4.0). Original teaching copy: CC BY-NC 4.0. Code: MIT.</p></details>
+      <details class="so-fold so-credits" name="footer-disclosure"><summary>Credits and Sources</summary><p class="so-credit">Built on <a href="https://github.com/iancoleman/bip39" target="_blank" rel="noopener">Ian Coleman’s BIP39</a> (MIT, © 2014–2016 Ian Coleman). Hexagram readings are supplied English translations of the original Zhōu Yì judgments.</p><p class="so-credit">Stars adapted from the <a href="https://github.com/astronexus/HYG-Database" target="_blank" rel="noopener">HYG catalogue</a> (CC BY-SA 4.0). Original teaching copy: CC BY-NC 4.0. Code: MIT.</p></details>
     </footer>
   </main>
 </div><!-- /.page-content -->

@@ -12,7 +12,7 @@ star catalogue. All project styling lives in `css/site.css`.
 1. **The Cast** — each line immediately joins the aligned hexagram, binary, and
    word weave. Subtle bands group the eleven bits behind each word; linked
    highlights trace either a word to its 11 bits or a hexagram to its 6 bits.
-   The footer’s expandable I Ching Hexagrams reference switches between Fu Xi
+   The footer’s expandable Hexagrams reference switches between Fu Xi
    binary order and King Wen order without changing the reading.
 2. **The Seal** — Water, Fire, Earth, or Air supplies the final two entropy bits,
    shown in its element colour beneath four gold checksum lines; together they
@@ -34,7 +34,9 @@ Crypto depends on a secure context; `localhost` is treated as secure by
 browsers.
 
 There is no build step and no package installation. Deploy the contents of
-this folder directly to any static host.
+this folder directly to any static host. When served over HTTPS (or localhost),
+supporting browsers can install it as a standalone web app and retain the core
+page for offline use.
 
 ## Test
 
@@ -52,6 +54,7 @@ Before publishing, set the production canonical and Open Graph URLs in
 - `js/site.js` — header, accessibility helpers, and collapsible sections.
 - `js/seedoracle*.js` — casting, state, hexagram, and Bitcoin teaching logic.
 - `js/stardata.js` and `js/stars.js` — fixed-sky catalogue data and renderer.
+- `manifest.webmanifest` and `sw.js` — install metadata and offline app shell.
 - `tests/seedoracle-vectors.cjs` — deterministic cryptographic test vectors.
 
 ## Licensing
