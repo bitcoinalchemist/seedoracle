@@ -1,11 +1,11 @@
 'use strict';
 
-var CACHE_NAME = 'seed-oracle-2026-09-18c';
+var CACHE_NAME = 'seed-oracle-2026-09-18e';
 var APP_SHELL = [
   './',
   './index.html',
   './manifest.webmanifest?v=20260918c',
-  './css/site.css?v=20260918a',
+  './css/site.css?v=20260918e',
   './js/site.js?v=20260918c',
   './js/ichingjudgments.js',
   './js/bip39-words.js',

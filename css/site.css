@@ -1046,7 +1046,8 @@ html:has(.hx-overlay.open) { overflow: hidden; }
 
 /* Three movements: a live cast, an elemental signature, and its proof. */
 .so-ctx { --so-cs: var(--gold); }
-.so-ctx .page-content { max-width: 1180px; padding-inline: 32px; }
+.so-ctx .page-content { max-width: 1180px; padding-inline: 32px; flex: 1; display: flex; }
+.so-ctx .page-content > main { flex: 1; display: flex; flex-direction: column; min-width: 0; padding-bottom: 0; }
 .so-alert--top { max-width: 880px; margin: 20px auto 38px; background: transparent; border-color: var(--rule); }
 .so-alert p { font-size: .8rem; }
 .so-chapter { padding-bottom: 36px; }
@@ -1143,8 +1144,9 @@ html:has(.hx-overlay.open) { overflow: hidden; }
 .so-phrase-list li { display: grid; grid-template-columns: 28px minmax(0,1fr); align-items: baseline; gap: 10px; min-width: 0; font: 1.22rem/1.5 var(--serif); color: var(--text); }
 .so-phrase-list strong { min-width: 0; overflow-wrap: anywhere; font-weight: 400; }
 .so-phrase-num { color: var(--gold-ink); text-align: right; font: .7rem/1 var(--mono); }
-.so-footer { max-width: 900px; margin: 32px auto 60px; border-top: 1px solid var(--rule); }
+.so-footer { width: 100%; max-width: 900px; margin: auto auto 0; padding-top: 32px; }
 .so-footer > details { width: 100%; border-bottom: 1px solid var(--rule); }
+.so-footer > details:first-child { border-top: 1px solid var(--rule); }
 .so-footer > details[open] { padding-bottom: 24px; }
 .so-footer .so-cipher { max-width: none; margin: 0; padding: 0; }
 .so-footer summary {
@@ -1167,7 +1169,7 @@ html:has(.hx-overlay.open) { overflow: hidden; }
   .so-seal-complete { gap: 16px; }
   .so-phrase-list { gap: 7px 24px; margin-inline: auto; }
   .so-phrase-list li { grid-template-columns: 22px minmax(0,1fr); gap: 7px; font-size: 1.05rem; }
-  .so-footer { margin-top: 28px; margin-bottom: 40px; }
+  .so-footer { margin-top: auto; margin-bottom: 0; padding-top: 28px; }
   .so-footer summary { min-height: 52px; }
   .so-footer .so-cipher .so-note { margin: 16px auto; text-align: left; }
   .so-sequence { gap: 8px; margin: 16px 0; }
